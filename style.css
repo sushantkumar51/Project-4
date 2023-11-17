@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Poppins&family=Roboto:wght@500&family=Ubuntu&display=swap');
+
+/* CSS Reast */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(218, 195, 164);
+}
+
+/* Nav Start */
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    gap: 50px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand img {
+    width: 45px;
+
+}
+
+/* Nav End */
+
+/* Container Start */
+
+.container {
+    min-height: 75vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 90vw;
+    border-radius: 12px;
+    margin: 23px auto;
+    padding: 34px;
+    background-image: url('bg.jpg');
+    background-size: 1250px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+
+.songItemContainer {
+    margin-block: 50px;
+}
+
+.songItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: white;
+    color: black;
+    margin-block: 12px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.songItem:hover {
+    color: white;
+    background-color: #1ed760;
+    transition: background-color 0.1s ease-out;
+}
+
+.songItem img {
+    width: 44px;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+.songName {
+    padding-inline: 10px;
+}
+
+.songItemPlay {
+    padding-right: 10px;
+    
+    /* color: green; */
+}
+
+/* Bottom Start */
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 75px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.statusBar {
+    display: flex;
+    align-items: center;
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+    margin-inline: 8px;
+}
+
+.icons {
+    margin-block: 12px;
+}
+
+.icons i {
+    margin-inline: 20px;
+    cursor: pointer;
+}
+
+/* Bootom End */
+
+
+/* Song Info Start */
+
+
+.songInfo {
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 80px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10vw;
+}
+
+.currentSong {
+    width: 30vw;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    width: 50vw;
+    height: 10vh;
+    object-fit: fill;
+}
+
+/* Song Info End */
+
+
+/*CSS for Responsive */
+
+@media screen and (max-width: 450px) {
+    
+    body {
+        background-color: black;
+    }
+
+    nav ul {
+        padding-inline: 2vw;
+        height: 80px;
+        font-size: 1.25em;
+        gap: 20px;
+    }
+
+    .container {
+        width: 100%;
+        background: black;
+        padding: 10px;
+    }
+
+    .container div {
+        margin-inline: auto;
+    }
+
+    .songItem {
+        width: 100%;
+        height: 80px;
+    }
+
+    #myProgressBar {
+        width: 65vw;
+    }
+}
